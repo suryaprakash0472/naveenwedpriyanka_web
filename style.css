@@ -458,6 +458,9 @@ body:hover .cursor-heart {
 
     animation: heroZoom 15s ease-out forwards;
 
+    /* Slight lift so faces read clearly through the overlay */
+    filter: brightness(1.08) contrast(1.03);
+
 }
 
 .hero-overlay {
@@ -466,13 +469,20 @@ body:hover .cursor-heart {
 
     inset: 0;
 
+    /*
+       Faces sit roughly in the lower-middle of the frame.
+       This gradient stays dark where the headline text sits (top),
+       clears up almost completely over the couple (middle),
+       then darkens again at the bottom for the names/date/button.
+    */
     background:
         linear-gradient(
             180deg,
-            rgba(8,5,6,0.55) 0%,
-            rgba(8,5,6,0.18) 35%,
-            rgba(8,5,6,0.4) 65%,
-            rgba(8,5,6,0.95) 100%
+            rgba(8,5,6,0.6) 0%,
+            rgba(8,5,6,0.25) 30%,
+            rgba(8,5,6,0.05) 50%,
+            rgba(8,5,6,0.1) 70%,
+            rgba(8,5,6,0.65) 100%
         );
 
 }
